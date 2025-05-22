@@ -1,0 +1,7 @@
+POST /chats/messages/12
+Content-Type: application/json
+
+{
+  "senderName": "alice",
+  "message": "I'm feeling so happy today!"
+}
