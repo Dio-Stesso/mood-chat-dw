@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<div class="profile-container">
+  <h3>My Profile</h3>
+  <div class="photo-section">
+    <img [src]="profile.photoUrl || 'assets/default-avatar.png'" alt="Avatar" class="avatar">
+    <input type="file" (change)="onFileSelected($event)">
+  </div>
+  <div class="form-group">
+    <label>Username</label>
+    <input [(ngModel)]="profile.username" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input [(ngModel)]="profile.email" type="email" class="form-control">
+  </div>
+  <button class="btn btn-primary mt-2" (click)="saveProfile()">Save Changes</button>
+
+  <hr>
+
+  <h5>Change Password</h5>
+  <div class="form-group">
+    <label>Current Password</label>
+    <input [(ngModel)]="currentPassword" type="password" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>New Password</label>
+    <input [(ngModel)]="newPassword" type="password" class="form-control">
+  </div>
+  <button class="btn btn-secondary mt-2" (click)="changePassword()">Update Password</button>
+</div>

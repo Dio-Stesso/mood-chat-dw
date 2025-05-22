@@ -1,0 +1,22 @@
+/* === центровка формы полностью по окну =============================== */
+.auth-wrapper {
+  position: fixed;          /* растягиваем на всё окно */
+  inset: 0;                 /* top / right / bottom / left = 0 */
+  display: flex;
+  align-items: center;      /* центровка по вертикали  */
+  justify-content: center;  /* центровка по горизонтали */
+  overflow: auto;           /* если экран совсем маленький */
+  padding: 1rem;
+}
+
+/* === «карточка» регистрации ======================================== */
+.auth-card {
+  background: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 0 .75rem rgba(0, 0, 0, .15);
+  padding: 2.5rem;
+}
+
+/* === вспомогательные отступы ======================================= */
+.auth-gap-sm { margin-bottom: .75rem; }  /* чуть меньше, чем .mb-3        */
+.auth-title   { color: var(--bs-blue); } /* можно покрасить заголовок    */

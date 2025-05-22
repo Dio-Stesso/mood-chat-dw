@@ -1,0 +1,56 @@
+<div class="auth-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6 auth-card">
+
+        <h4 class="auth-title text-center mb-4">Create an account!</h4>
+
+        <form (ngSubmit)="register()" #regForm="ngForm" novalidate>
+          <p class="text-danger text-center" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+          <input class="form-control auth-gap-sm"
+                 name="username"
+                 [(ngModel)]="username"
+                 placeholder="Username"
+                 required>
+
+          <input class="form-control auth-gap-sm"
+                 type="email"
+                 name="email"
+                 [(ngModel)]="email"
+                 placeholder="Email address"
+                 required>
+
+          <div class="row">
+            <div class="col-sm-6 auth-gap-sm">
+              <input class="form-control"
+                     type="password"
+                     name="password"
+                     [(ngModel)]="password"
+                     placeholder="Password"
+                     required>
+            </div>
+            <div class="col-sm-6 auth-gap-sm">
+              <input class="form-control"
+                     type="password"
+                     name="repeatPassword"
+                     [(ngModel)]="repeatPassword"
+                     placeholder="Repeat password"
+                     required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Register account</button>
+        </form>
+
+        <hr>
+
+        <p class="text-center small mb-0">
+          Already have an account?
+          <a routerLink="/login" class="text-decoration-none">Login!</a>
+        </p>
+
+      </div><!-- /.auth-card -->
+    </div>
+  </div>
+</div><!-- /.auth-wrapper -->

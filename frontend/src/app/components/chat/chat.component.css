@@ -1,0 +1,55 @@
+.chat-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-box {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.media-body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.media-body .bg-light,
+.media-body .bg-primary {
+  max-width: 100%;
+  width: auto;
+}
+
+.align-self-end .media-body {
+  text-align: right;
+}
+
+.media {
+  max-width: 75%;
+}
+
+.chat-msg {
+  max-width: 75%;
+  margin-bottom: .5rem !important;
+}
+
+.chat-msg .bubble {
+  display: inline-block;
+  width: max-content;
+  max-width: 100%;
+  padding: .5rem 1rem;
+  border-radius: .35rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.chat-msg.left .bubble {
+  margin-left: .25rem;
+}
+
+.chat-msg.right .bubble {
+  margin-right: .25rem;
+}
